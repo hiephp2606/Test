@@ -20,6 +20,10 @@ public class Menu2 {
             String email = sc.nextLine();
             if (email.equals(people.get(i).getEmail())) {
                 System.out.println("Dang nhap thanh cong!");
+                System.out.printf("Cap nhat lai mat khau cua ban: ");
+                String updatePassword = sc.nextLine();
+                people.get(i).setPassWord(updatePassword);
+                System.out.println("Cap nhat mat khau thanh cong! \n");
             }
             else {
                 System.out.println("Email khong ton tai, vui long tao tai khoan hoac thu lai!");

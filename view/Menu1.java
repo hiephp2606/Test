@@ -14,6 +14,7 @@ public class Menu1 {
     AccountService accountService = new AccountService();
 
     public void displayMenu1() {
+        System.out.println("============Techmaster_start============");
         System.out.println("1. Dang nhap");
         System.out.println("2. Dang ky");
     }
@@ -25,11 +26,11 @@ public class Menu1 {
             int choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
                 case 1:
-                    System.out.println("* DANG NHAP *");
+                    System.out.println("\n* DANG NHAP *");
                     Account account1 = accountService.accountLogin(sc, people, people.size());
                     break;
                 case 2:
-                    System.out.println("* DANG KY *");
+                    System.out.println("\n* DANG KY *");
                     Account account2 = accountService.accountRegister(sc, people);
                     break;
             }
