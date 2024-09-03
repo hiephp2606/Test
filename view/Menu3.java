@@ -26,13 +26,13 @@ public class Menu3 {
                     System.out.println("Cap nhat Username thanh cong!");
                     break;
                 case 2:
-                    System.out.println("Thay doi Email: ");
+                    System.out.printf("Thay doi Email: ");
                     String EmailUpdate = sc.nextLine();
                     people.get(i).setEmail(EmailUpdate);
                     System.out.println("Cap nhat Email thanh cong!");
                     break;
                 case 3:
-                    System.out.println("Thay doi Password: ");
+                    System.out.printf("Thay doi Password: ");
                     String PasswordUpdate = sc.nextLine();
                     people.get(i).setPassWord(PasswordUpdate);
                     System.out.println("Cap nhat Password thanh cong!");

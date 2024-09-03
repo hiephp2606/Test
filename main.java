@@ -13,6 +13,7 @@ public class main {
         Menu1 menu1 = new Menu1();
         List<Person> personList = new ArrayList<>();
         Account account = new Account(personList);
+
         menu1.selectMenu1(sc, account, personList );
     }
 }
