@@ -1,20 +1,20 @@
 package view;
 
-import entities.Person;
+import entities.Account;
 import service.Check;
-import service.PersonService;
+import service.AccountService;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class Menu3 {
-    PersonService personService = new PersonService();
+    AccountService accountService = new AccountService();
     Check check = new Check();
-    public void displayMenu3 (List<Person> people, int i) {
+    public void displayMenu3 (List<Account> people, int i) {
         System.out.println("Chon hanh dong ban muon thuc hien:\n  1. Thay doi Username\n  2. Thay doi Email\n  3. Thay doi Password\n  4. Logout\n ");
     }
 
-    public void selectMenu3 (Scanner sc, List<Person> people, int i) {
+    public void selectMenu3 (Scanner sc, List<Account> people, int i) {
         boolean loop = true;
         System.out.println("============WELCOME " + people.get(i).getUserName() + "============" );
         do {

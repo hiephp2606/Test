@@ -1,17 +1,16 @@
 package view;
 
+import entities.ListAccount;
 import entities.Account;
-import entities.Person;
+import service.ListAccountService;
 import service.AccountService;
-import service.PersonService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Menu1 {
-    PersonService personService = new PersonService();
     AccountService accountService = new AccountService();
+    ListAccountService listAccountService = new ListAccountService();
 
     public void displayMenu1() {
         System.out.println("============Techmaster_start============");
@@ -19,7 +18,7 @@ public class Menu1 {
         System.out.println("2. Dang ky");
     }
 
-    public void selectMenu1(Scanner sc,Account account, List<Person> people ) {
+    public void selectMenu1(Scanner sc, ListAccount listAccount, List<Account> people ) {
         do {
             displayMenu1();
             System.out.print("Lua chon (1 hoac 2): ");
@@ -27,14 +26,14 @@ public class Menu1 {
             switch (choice) {
                 case 1:
                     System.out.println("\n* DANG NHAP *");
-                    Account account1 = accountService.accountLogin(sc, people, people.size());
+                    ListAccount listAccount1 = listAccountService.accountLogin(sc, people, people.size());
                     break;
                 case 2:
                     System.out.println("\n* DANG KY *");
-                    Account account2 = accountService.accountRegister(sc, people);
+                    ListAccount listAccount2 = listAccountService.accountRegister(sc, people);
                     break;
             }
-            System.out.println(account);
+            System.out.println(listAccount);
         } while (true);
     }
 

@@ -1,6 +1,5 @@
+import entities.ListAccount;
 import entities.Account;
-import entities.Person;
-import service.PersonService;
 import view.Menu1;
 
 import java.util.ArrayList;
@@ -11,9 +10,9 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Menu1 menu1 = new Menu1();
-        List<Person> personList = new ArrayList<>();
-        Account account = new Account(personList);
+        List<Account> accountList = new ArrayList<>();
+        ListAccount listAccount = new ListAccount(accountList);
 
-        menu1.selectMenu1(sc, account, personList );
+        menu1.selectMenu1(sc, listAccount, accountList);
     }
 }

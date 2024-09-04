@@ -1,8 +1,6 @@
 package view;
 
 import entities.Account;
-import entities.Person;
-import service.AccountService;
 
 import java.util.List;
 import java.util.Scanner;
@@ -12,7 +10,7 @@ public class Menu2 {
         System.out.println("Quen mat khau? (y/n)");
     }
 
-    public void selectMenu2(Scanner sc, List<Person> people, int i) {
+    public void selectMenu2(Scanner sc, List<Account> people, int i) {
         displayMenu2();
         String choice = sc.nextLine();
         if (choice.equalsIgnoreCase("y")) {
